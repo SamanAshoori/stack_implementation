@@ -9,7 +9,7 @@ class Stack:
     
     def push(self,x):
         if(self.top == (self.height - 1)):
-            print('Cannot Push - stack is full')
+            print('!!!!!!   Cannot Push - stack is full  !!!!!!!!!')
         else:
             self.top = self.top + 1
             self.data.insert(self.top, x)
@@ -32,5 +32,15 @@ print(s1.data)
 #test to see if it works
 s1.push(12)
 s1.push("42")
-print("top of stack is"  + str(s1.top))
+s1.push(True)
+s1.push(1)
+s1.push(2)
+#Max should be achieved
+s1.push('should output stack is full')
+#Perfect
+
+print("height of stack is "  + str(s1.top))
+print("top of stack is "  + str(s1.data[s1.top]))
 print("data in stack is" + str(s1.data))
+
+#Time to see if popping works now

@@ -1,5 +1,4 @@
 #Welcome to the Stack Implementation in Python
-
 class Stack:
 #======== class start ==========
     def __init__(self, height):
@@ -19,13 +18,10 @@ class Stack:
             print('nothing to pop')
         else:
             del self.data[self.top]
-            self.top -= -1
-
-
+            self.top = self.top - 1
 #============ class end ===================
-print('Test')
-
 s1 = Stack(5)
+print("====== INIT TESTING OF STACK =======" )
 print(s1.height)
 print(s1.top)
 print(s1.data)
@@ -36,11 +32,27 @@ s1.push(True)
 s1.push(1)
 s1.push(2)
 #Max should be achieved
+print("====== Error Testing =======" )
+s1.push('should output stack is full')
+s1.push('should output stack is full')
 s1.push('should output stack is full')
 #Perfect
-
+print("===============" )
 print("height of stack is "  + str(s1.top))
 print("top of stack is "  + str(s1.data[s1.top]))
 print("data in stack is" + str(s1.data))
-
+print("====== Popping Time =======" )
 #Time to see if popping works now
+s1.pop()
+s1.pop()
+print("height of stack is "  + str(s1.top))
+print("top of stack is "  + str(s1.data[s1.top]))
+print("data in stack is" + str(s1.data))
+print("====== More Popping Below =======" )
+s1.pop()
+s1.pop()
+s1.pop()
+#Below should output error code
+s1.pop()
+s1.pop()
+s1.pop()

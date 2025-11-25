@@ -9,12 +9,13 @@ class Stack:
     
     def push(self,x):
         if(self.top == (self.height - 1)):
-            pass
-        elif:
-            
+            print('Cannot Push - stack is full')
         else:
             self.top + 1
             self.data[self.top] = x
+    
+    def pop(self):
+        pass
 
 
 

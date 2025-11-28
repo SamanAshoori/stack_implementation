@@ -13,6 +13,27 @@ def parenthesis_checker(input):
             #Checks that the ASCII value of the input is a opening bracket
             if(ord(x) == 40 or ord(x) == 91 or ord(x) == 123):
                 s1.push(x)
+            # Close Bracket Check
+            elif(ord(x) == 41):
+                peeked_char = s1.peek()
+                if(ord(peeked_char) == 40):
+                    s1.pop()
+                else:
+                    return 'Fail - Incorrect Closing'
+            elif(ord(x) == 93):
+                peeked_char = s1.peek()
+                if(ord(peeked_char) == 91):
+                    s1.pop()
+                else:
+                    return 'Fail - Incorrect Closing'
+            elif(ord(x) == 125):
+                peeked_char = s1.peek()
+                if(ord(peeked_char) == 123):
+                    s1.pop()
+                else:
+                    return 'Fail - Incorrect Closing'
+        #if leaves the for loop - it must have passed
+        return 'Pass'
         #once all pushing is done
 
         
@@ -30,7 +51,3 @@ print(parenthesis_checker(input_string1))
 print(parenthesis_checker(input_string2))
 print(parenthesis_checker(input_string3))
 print(parenthesis_checker(input_string4))
-
-
-
-

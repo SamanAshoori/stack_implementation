@@ -30,7 +30,7 @@ class Stack:
             return False
         
     def peek(self):
-        return  self.data[self.top]
+        return  str(self.data[self.top])
 #============ class end ===================
 #27th Noveember 2025 - As I know it works and I want to use this cass elsewhere  I will comment out all the tests
 """

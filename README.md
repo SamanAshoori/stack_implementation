@@ -1,48 +1,38 @@
-# Python Stack Implementation & Parentheses Checker
+# Data-Structures-Algorithms-MonoRepo
 
-This project is a hands-on exercise to build a fundamental data structure, the Stack, from scratch in Python. It also includes a practical application of the Stack to solve the classic "Balanced Parentheses" problem.
+This repository serves as a centralized codebase documenting my progression as a Computer Scientist . It tracks the transition from high-level scripting to low-level engineering.
 
+The objective is not just to solve LeetCode problems, but to build a personal standard library of data structures and algorithms from the ground up.
 
-## My Learning Journey
+## Philosophy: No "Vibe Coding"
 
-The primary goal of this project was to deepen my understanding of data structures by moving from knowledge to practical implementation. Building the Stack class and then immediately using it to solve a problem helped solidify concepts like LIFO (Last-In, First-Out) and how a stack's methods (`push`, `pop`, `peek`) are used in algorithms.
+As a Student of Higher Education in the modern era, it is easy to "vibe code"—relying on heavy abstractions, frameworks, or Copilot suggestions without understanding the underlying mechanics. This repository rejects that approach.
 
-### The Power of Debugging
+To get *cracked* at engineering, I am strictly avoiding libraries for the core logic. If I need a hash map, I build the hash map. If I need a vector, I manage the memory manually.
 
-A significant part of my learning process involved debugging. While developing the `parenthesis_checker`, I encountered issues where the logic wasn't behaving as expected. To solve this, I relied heavily on using **breakpoints** in my code editor.
+The focus is on:
+* **Deep Understanding:** Knowing exactly how data is laid out in memory.
+* **Algorithmic Complexity:** Prioritizing O(1) and O(log n) over naive O(n) solutions.
+* **Systems Thinking:** transitioning from "writing scripts" to "architecting software."
 
-By placing a breakpoint inside the `for` loop of the `parenthesis_checker` function, I was able to:
+## Roadmap & Structure
 
-*   **Step through the code line by line:** This allowed me to watch the execution flow and see exactly which `if/elif` block was being entered for each character in the input string.
-*   **Inspect variables in real-time:** I could constantly monitor the state of the stack (`s1.data` and `s1.top`) and the value of the current character `x`.
-*   **Identify flawed logic:** This process was crucial in identifying a key bug where I was incorrectly trying to get the ASCII value of a method (`s1.peek`) instead of calling the method to get its return value (`s1.peek()`). Seeing the unexpected value of the variable at the breakpoint made the error immediately obvious.
+The repository is split into two primary distinct distinct streams, handling different languags popular within programming:
 
-Using the debugger was a powerful lesson in how to effectively troubleshoot and understand what your code is *actually* doing versus what you *think* it's doing.
+### 1. Python (Logic & Architecture)
+Used for rapid prototyping of complex algorithms, graph traversal, and high-level architectural patterns.
+* **Focus:** Hash Maps, Trees, Graphs, Sorting, Searching.
+* **Current Status:** Implementing fundamental linear data structures (Stacks, Queues) to handle data flow.
 
-## Project Components
+### 2. C++ (Systems & Memory)
+Used to enforce discipline regarding memory management, pointers, and hardware interaction.
+* **Focus:** Manual memory management, Pointers/References, STL implementation, Concurrency.
+* **Goal:** To move beyond "C with Classes" and master Modern C++ (C++17/20).
 
-### 1. The Stack (`stack.py`)
+## Usage
 
-This file contains a custom `Stack` class. It's a fixed-size stack implemented using a Python list as the underlying data store.
+This is a monorepo. Projects are categorized by language, rather than isolated repositories. This structure allows for code reuse and demonstrates the evolution of my standard library over time.
 
-#### Core Methods:
-*   `__init__(self, height)`: Initializes the stack with a maximum capacity.
-*   `push(self, x)`: Adds an element to the top of the stack if it's not full.
-*   `pop(self)`: Removes and returns the top element from the stack.
-*   `is_empty(self)`: Returns `True` if the stack is empty.
-*   `peek(self)`: Returns the top element without removing it.
+## A Note on Generative AI
 
-### 2. The Use Case: Parentheses Checker (`stack_usecase.py`)
-
-This script imports the `Stack` class to solve the "Balanced Parentheses" problem.
-
-#### The Algorithm:
-
-The function `parenthesis_checker(input)` takes a string and determines if the brackets (`()`, `[]`, `{}`) are balanced and correctly nested.
-
-1.  It iterates through each character of the input string.
-2.  If an **opening bracket** (`(`, `[`, `{`) is found, it is **pushed** onto the stack.
-3.  If a **closing bracket** (`)`, `]`, `}`) is found, the script **peeks** at the character on top of the stack.
-4.  If the character on top is the corresponding opening bracket, the script **pops** it from the stack, effectively canceling out the pair.
-5.  If the stack is empty when a closing bracket is found, or if the peeked character is not the correct opening bracket, the string is declared unbalanced.
-6.  After the entire string has been processed, if the stack is empty, it means every bracket was correctly matched and the string is **balanced**. If the stack is not empty, it means there are unmatched opening brackets, and the string is **unbalanced**.
+As I am relearning academia level computer science solo - I utilize Generative AI as a rigorous Socratic tutor to review code quality and architecture. While AI tools (like the one used to format this README) handle administrative overhead, the code implementation is manual. The value of this repository lies in the struggle of implementation, not the speed of completion.

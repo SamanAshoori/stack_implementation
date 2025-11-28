@@ -32,8 +32,11 @@ def parenthesis_checker(input):
                     s1.pop()
                 else:
                     return 'Fail - Incorrect Closing'
-        #if leaves the for loop - it must have passed
-        return 'Pass'
+        #if leaves the for loop and is empty - it must have passed
+        if(s1.top != -1):
+            return 'Fail - missing a closer'
+        else:
+            return 'Pass'
         #once all pushing is done
 
         

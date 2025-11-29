@@ -1,10 +1,10 @@
 # Data-Structures-Algorithms-MonoRepo
 
-This repository serves as a centralized codebase documenting my progression as a Computer Scientist . It tracks the transition from high-level scripting to low-level engineering.
+This repository serves as a centralized codebase documenting my progression as a Computer Scientist. It tracks the transition from high-level scripting to low-level engineering.
 
 The objective is not just to solve LeetCode problems, but to build a personal standard library of data structures and algorithms from the ground up.
 
-## Philosophy: No "Vibe Coding"
+## Philosophy: No "Vibe Coding" - No Proompting
 
 As a Student of Higher Education in the modern era, it is easy to "vibe code"—relying on heavy abstractions, frameworks, or Copilot suggestions without understanding the underlying mechanics. This repository rejects that approach.
 

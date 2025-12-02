@@ -18,6 +18,8 @@ class CircQueue:
             return True
         elif(self.isFull):
             return  False
+        elif((self.tail+1) % self.size == self.front):
+            return False
         else:
             self.tail = self.tail + 1
             self.data[self.tail] = input
@@ -25,7 +27,11 @@ class CircQueue:
     def dequeue(self) -> bool:
         if(self.isEmpty):
             return False
-        elif
+        elif(self.front == self.tail):
+            self.front = -1
+            self.tail = -1
+        else:
+            self.front = (self.front + 1) % self.size
 
 
 
@@ -34,3 +40,7 @@ class CircQueue:
 
 q1 = CircQueue(4)
 print(q1.enqueue(4))
+print(q1.enqueue(2))
+print(q1.dequeue())
+print(q1.dequeue())
+print(q1.dequeue())

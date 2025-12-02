@@ -22,6 +22,15 @@ class CircQueue:
             self.tail = self.tail + 1
             self.data[self.tail] = input
 
+    def dequeue(self) -> bool:
+        if(self.isEmpty):
+            return False
+        elif
+
+
+
+        
+
 
 q1 = CircQueue(4)
 print(q1.enqueue(4))
